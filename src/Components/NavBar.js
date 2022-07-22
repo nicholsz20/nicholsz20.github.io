@@ -9,12 +9,18 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 export default function ButtonAppBar() {
   return (
+  <>
+  <div className="navbar-container">
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" style={{ background: '#000000' }}>
+      <AppBar
+        position="sticky"
+        style={{  
+          background: 'rgba(0,0,0,0.0)',
+          borderTopWidth: 0,
+          }}>
         <Toolbar>
           <IconButton
             size="large"
-            edge="start"
             color="inherit"
             aria-label="menu"
             sx={{ mr: 2 }}
@@ -24,14 +30,16 @@ export default function ButtonAppBar() {
           <Typography variant="h7" component="div" sx={{ flexGrow: 1 }}>
             Menu
           </Typography>
-          <Button color="success" varient="outlined">Gallery</Button>
-          <Button color="error" varient="contained">About Me</Button>
-          <Button color="success" varient="text">Contact</Button>
-
-
+          <div className="btn"> 
+            <Button varient="outlined" style={{color: '#000000'}}>Gallery</Button>
+            <Button varient="contained" style={{color: '#000000'}}>About Me</Button>
+            <Button varient="text" style={{color: '#000000'}}>Contact</Button>
+          </div>
         </Toolbar>
       </AppBar>
     </Box>
-  );
+    </div>
+  </>
+);
 }
 
