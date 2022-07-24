@@ -17,6 +17,7 @@ export default function ButtonAppBar() {
         style={{  
           background: 'rgba(0,0,0,0.0)',
           borderTopWidth: 0,
+          padding: 100,
           }}>
         <Toolbar>
           <IconButton
@@ -27,7 +28,7 @@ export default function ButtonAppBar() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h7" component="div" sx={{ flexGrow: 1 }}>
+          <Typography variant="h7" component="div" sx={{ flexGrow: 1 }} style={{color: '#000000'}}>
             Menu
           </Typography>
           <div className="btn"> 
