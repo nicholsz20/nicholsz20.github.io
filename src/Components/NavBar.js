@@ -24,7 +24,7 @@ export default function ButtonAppBar() {
         <AppBar
           position="fixed"
           style={{  
-            background: 'rgba(0,0,0,0.0)',
+            backgroundColor: '#ffffff',
             boxShadow: 0, 
             top: 0, 
             }}>
