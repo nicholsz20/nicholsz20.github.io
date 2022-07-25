@@ -56,11 +56,14 @@ const Gallery = () => {
     },
   ]
   const [model, setModel] = useState(false);
-  const [tempimgSrc, setTempImgSrc] = useState('');
+  const [tempimgSrc, setTempImgSrc] = useState('')
+
   const getImg = (imgSrc) =>{
     setTempImgSrc(imgSrc);
     setModel(true);
   }
+
+  
     return (
       <>
       <div className ={model? "model open" : "model"}>

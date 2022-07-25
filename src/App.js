@@ -3,19 +3,41 @@ import NavBar from './Components/NavBar'
 import AboutMe from './Components/AboutMe'
 import Gallery from './Components/Gallery'
 
+import { Box, Stack } from '@mui/material'
+import { BrowserRouter } from 'react-router-dom' 
 
 
-function App() {
+
+
+const App = () => {
 
   return (
+    <BrowserRouter>
 
-    <div>
-      <NavBar />
-      <Gallery  />
+        <Box
+          maxWidth="100%"
+          display="flex"
+          justifyContent="center" 
+          alignItems="center"> 
 
 
-    </div>
-  );
+          <Stack 
+            direction="column"
+            spacing={0} 
+            justifyContent="center" 
+            alignItems="center">
+
+              <NavBar />
+
+          </Stack>
+
+          
+        </Box>
+
+    </BrowserRouter>
+    
+
+  )
 }
 
-export default App;
+export default App
