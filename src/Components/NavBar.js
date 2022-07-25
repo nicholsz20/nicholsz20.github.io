@@ -16,7 +16,7 @@ import AboutMe from './AboutMe'
 import Welcome from './Welcome'
 import ContactUs from './ContactUs'
 
-export default function ButtonAppBar() {
+export default function TDNavBar() {
   return (
 
     <Box>
@@ -33,10 +33,11 @@ export default function ButtonAppBar() {
           <Toolbar>
 
             <IconButton
+              
               size="large"
               color="inherit"
               aria-label="menu"
-              sx={{ mr: 2 }}
+              sx={{ mr: 2 , display: { sm: 'flex', md: 'none'}, color: '#000'}}
             >
               <MenuIcon />
             </IconButton>
