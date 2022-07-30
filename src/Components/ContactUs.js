@@ -28,6 +28,20 @@ const ContactUs  = () => {
     return (
       //Create a form where the user can click what type event they want a photo for
       <form onSubmit={handleSubmit}>
+        <Typography
+            variant="label"
+            className="div" 
+            fontFamily="MainFont4"
+            htmlFor="name"
+        >
+          Name:
+        </Typography>
+        <Typography
+            variant="input"
+            type="text"
+            fontFamily="MainFont4"
+            
+        ></Typography>
         <div>
           <label htmlFor="name">Name:</label>
           <input type="text" id="name" required />

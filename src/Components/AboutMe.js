@@ -28,7 +28,7 @@ const About = () => {
             variant="h2"
             className="about-title" 
             fontFamily="MainFont4"
-            >
+        >
                 About Me 
         </Typography>
         <Typography
