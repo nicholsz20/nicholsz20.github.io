@@ -1,7 +1,7 @@
 import React from 'react' 
 
 
-import { Box, Stack, AppBar, Toolbar, IconButton, CardMedia } from '@mui/material'
+import { Box, Paper, Stack, AppBar, Toolbar, IconButton, CardMedia } from '@mui/material'
 import { Dialog, DialogContent, Typography } from '@mui/material'
 
 import CloseIcon from '@mui/icons-material/Close'
@@ -54,15 +54,31 @@ const PhotoDisplay = ( { status, handler, data }) => {
 
         <DialogContent>
 
-            {data && 
-            <CardMedia
-                sx={{
-                    width: '100%', 
-                    height: '100%'
+            <Stack 
+              direction="column"
+              spacing={2}
+              justifyContent="center"
+              alignItems="center"
+              display="flex">
+
+            
+
+               <Paper
+                sx={{ 
+                  width: '50%', 
                 }}
-                component="img"
-                src={data.imgSrc}/>
-            }
+                elevation={10}>
+
+                  {data && 
+                    <CardMedia
+                        
+                        component="img"
+                        src={data.imgSrc}/>
+                  }
+
+
+               </Paper>
+              </Stack>
 
 
         </DialogContent>

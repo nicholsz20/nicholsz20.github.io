@@ -103,7 +103,7 @@ const Gallery = () => {
            <Grid 
               sx={{ mb: 10, Width: "100vh" }}
               container 
-              spacing={{ xs: 2, md: 1, lg: 0}}
+              spacing={{ xs: 2, md: 0, lg: 0}}
               columns={{ xs: 1, sm: 0, md: 10 }}
               display="flex"
               justifyContent="center"
