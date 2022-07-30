@@ -62,7 +62,7 @@ const data = [
 
 
 const Gallery = () => {
-
+//Create a popup that explains the photo a little bit.
 
   /* 
     Purpose: 
