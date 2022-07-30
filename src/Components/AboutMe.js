@@ -29,6 +29,7 @@ const About = () => {
           display="flex">
 
           <CardMedia 
+            sx={{ overflow: 'hidden', objectFit: 'cover', width: '100%', height: '100%'}}
             src={toddprofile}
             component="img"/>
 
