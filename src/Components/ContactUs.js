@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react' 
 
-import { Box, Typography } from '@mui/material'
+import { Box, Typography, Stack, TextField, Button } from '@mui/material'
 
 const ContactUs  = () => {
   const [status, setStatus] = useState("Submit");
@@ -27,35 +27,92 @@ const ContactUs  = () => {
   };
     return (
       //Create a form where the user can click what type event they want a photo for
-      <form onSubmit={handleSubmit}>
+      <Box 
+      maxWidth={"80%"}
+      justifyContent={"center"}
+      alignItems={"center"}
+      display="flex">
+  
+      <Stack
+        mt={10}
+        direction={{ xs: 'column', sm: 'column', md: 'column'}}
+        spacing={5}
+        justifyContent="center"
+        alignItems="center"
+        display="flex">
+
         <Typography
-            variant="label"
-            className="div" 
+            variant="h5"
             fontFamily="MainFont4"
             htmlFor="name"
+            align="Center"
         >
-          Name:
+          Contact Us
         </Typography>
+
+      <form onSubmit={handleSubmit}>
+        <Stack
+          direction="column"
+        >
         <Typography
-            variant="input"
-            type="text"
+            variant="label"
             fontFamily="MainFont4"
-            
-        ></Typography>
-        <div>
-          <label htmlFor="name">Name:</label>
-          <input type="text" id="name" required />
-        </div>
-        <div>
-          <label htmlFor="email">Email:</label>
-          <input type="email" id="email" required />
-        </div>
-        <div>
-          <label htmlFor="message">Message:</label>
-          <textarea id="message" required />
-        </div>
-        <button type="submit">{status}</button>
+            htmlFor="name"
+            align="Center"
+        >
+          <TextField
+            id="name"
+            label="Name"
+            htmlFor="name"
+            required
+            size="small"
+            style={{ width: 300}}
+          />
+        </Typography>
+        <br />
+        <Typography
+            fontFamily="MainFont4"
+            htmlFor="email"
+            align="center"
+        >
+          <TextField
+            id="email"
+            label="Email"
+            required
+            size="small"
+            style={{ width: 300}}
+          />
+        </Typography>
+        <br />
+        <Typography
+            variant="label"
+            fontFamily="MainFont4"
+            htmlFor="message"
+            align="center"
+        >
+          <TextField
+            id="message"
+            label="Message"
+            required
+            size="normal"
+            multiline
+            minRows={4}
+            style={{ width: 300}}
+          />
+        </Typography>
+
+        <Button
+         type="submit"
+         size="medium"
+         varient="contained"
+         >
+           {status}
+        </Button>
+        </Stack>
       </form>
+      </Stack>
+
+      </Box>
     )
   }
   
