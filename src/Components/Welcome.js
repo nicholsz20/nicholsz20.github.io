@@ -62,7 +62,7 @@ function Welcome() {
           <Carousel
             data={data}
             time={2000}
-            width="850px"
+            width="500px"
             height="500px"
             captionStyle={captionStyle}
             radius="10px"
@@ -80,9 +80,9 @@ function Welcome() {
             thumbnailWidth="100px"
             style={{
               textAlign: "center",
-              maxWidth: "850px",
-              maxHeight: "500px",
-              margin: "40px auto",
+              width: "auto",
+              height: "500px",
+              margin: "auto",
             }}
           />
         </div>

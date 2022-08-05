@@ -14,7 +14,7 @@ const ContactUs  = () => {
       email: email.value,
       message: message.value,
     };
-    let response = await fetch("http://localhost:3000/contact", {
+    let response = await fetch("http://localhost:5000/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
@@ -31,7 +31,9 @@ const ContactUs  = () => {
       maxWidth={"80%"}
       justifyContent={"center"}
       alignItems={"center"}
-      display="flex">
+      display="flex"
+      >
+
   
       <Stack
         mt={10}
@@ -39,7 +41,9 @@ const ContactUs  = () => {
         spacing={5}
         justifyContent="center"
         alignItems="center"
-        display="flex">
+        display="flex"
+        backgroundColor="darkgrey"
+        >
 
         <Typography
             variant="h5"
@@ -59,9 +63,10 @@ const ContactUs  = () => {
             fontFamily="MainFont4"
             htmlFor="name"
             align="Center"
+
         >
           <TextField
-            id="name"
+            id="name"            
             label="Name"
             htmlFor="name"
             required

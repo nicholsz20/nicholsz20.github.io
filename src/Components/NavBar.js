@@ -5,6 +5,8 @@ import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/Menu'
+import InstagramIcon from '@mui/icons-material/Instagram';
+import TwitterIcon from '@mui/icons-material/Twitter';
 
 
 import TDButton from './TDButtons'
@@ -31,6 +33,7 @@ export default function TDNavBar() {
 
 
           <Toolbar>
+          
 
             <IconButton
               
@@ -39,6 +42,7 @@ export default function TDNavBar() {
               aria-label="menu"
               sx={{ mr: 2 , display: { sm: 'flex', md: 'none'}, color: '#000'}}
             >
+
               <MenuIcon />
             </IconButton>
 
@@ -48,7 +52,9 @@ export default function TDNavBar() {
                   text="Home"
                   variant="text"/>
 
+
                 <Box sx={{ flexGrow: 1}}/>
+
 
                 <TDButton destination={"/gallery"}
                   text="Gallery"
@@ -61,7 +67,25 @@ export default function TDNavBar() {
                 <TDButton  destination={"/contactus"}
                   text="Contact"
                   variant="text"/>
-
+                
+                <IconButton
+                  size="large"
+                  color="inherit"
+                  href="https://www.instagram.com/todd_s.carter/"
+                  aria-label="Instagram"
+                  sx={{ mr: 2 , display: { sm: 'flex', md: 'flex'}, color: '#000'}}
+                >
+                  <InstagramIcon/>
+                </IconButton>
+                <IconButton
+                  size="large"
+                  color="inherit"
+                  href="https://www.twitter.com/ToddS_Carter/"
+                  aria-label="Instagram"
+                  sx={{ mr: 2 , display: { sm: 'flex', md: 'flex'}, color: '#000'}}
+                >
+                  <TwitterIcon/>
+                </IconButton>
 
           </Toolbar>
 
@@ -84,6 +108,7 @@ export default function TDNavBar() {
               <Route path="/aboutme" element={<AboutMe/>}/>
               <Route path="/contactus" element={<ContactUs/>}/>
           </Routes>
+
 
       </Box>
 
