@@ -48,7 +48,7 @@ export default function TDNavBar() {
 
             
 
-              <TDButton  destination={"/"}
+               <TDButton  destination={"/"}
                   text="Home"
                   variant="text"/>
 
@@ -77,6 +77,7 @@ export default function TDNavBar() {
                 >
                   <InstagramIcon/>
                 </IconButton>
+                
                 <IconButton
                   size="large"
                   color="inherit"

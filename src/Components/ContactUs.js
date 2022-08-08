@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react' 
 
-import { Box, Typography, Stack, TextField, Button } from '@mui/material'
+import { Box, Typography, Stack, TextField, Button, Paper } from '@mui/material'
 
 const ContactUs  = () => {
 
@@ -17,13 +17,9 @@ const ContactUs  = () => {
       name: name.value,
       email: email.value,
       message: message.value,
-<<<<<<< HEAD
     }
-    let response = await fetch("http://localhost:3000/contact", {
-=======
-    };
+
     let response = await fetch("http://localhost:5000/contact", {
->>>>>>> 2431299620e8056a44929a8efd9194e08a7d7939
       method: "POST",
       headers: {
         "Content-Type": "application/jsoncharset=utf-8",
@@ -39,101 +35,86 @@ const ContactUs  = () => {
     return (
       //Create a form where the user can click what type event they want a photo for
       <Box 
-<<<<<<< HEAD
-        maxWidth={"80%"}
         justifyContent={"center"}
         alignItems={"center"}
         display="flex">
-=======
-      maxWidth={"80%"}
-      justifyContent={"center"}
-      alignItems={"center"}
-      display="flex"
-      >
+       
 
->>>>>>> 2431299620e8056a44929a8efd9194e08a7d7939
   
-      <Stack
-        mt={10}
-        direction={{ xs: 'column', sm: 'column', md: 'column'}}
-        spacing={5}
-        justifyContent="center"
-        alignItems="center"
-        display="flex"
-        backgroundColor="darkgrey"
-        >
+        <Paper 
+          elevation={2}
+          sx={{ 
+              width: {xs: '100%', sm: '100%', md: '50rem'}, 
+              height: {xs: '100%', sm: '100%', md:'80vh'},
+              backgroundColor: '#f2f2f2'
+              }}>
 
-        <Typography
-            variant="h5"
-            fontFamily="MainFont4"
-            htmlFor="name"
-            align="center"
-        >
-          Contact Us
-        </Typography>
+            <form onSubmit={handleSubmit}>
 
-      <form onSubmit={handleSubmit}>
-        <Stack
-          direction="column"
-        >
-        <Typography
-            variant="label"
-            fontFamily="MainFont4"
-            htmlFor="name"
-            align="Center"
+              <Stack 
+                mt={5}
+                direction="column"
+                spacing={2}
+                justifyContent="center"
+                alignItems="center" 
+                display="flex">
 
-        >
-          <TextField
-            id="name"            
-            label="Name"
-            htmlFor="name"
-            required
-            size="small"
-            style={{ width: 300}}
-          />
-        </Typography>
-        <br />
-        <Typography
-            fontFamily="MainFont4"
-            htmlFor="email"
-            align="center"
-        >
-          <TextField
-            id="email"
-            label="Email"
-            required
-            size="small"
-            style={{ width: 300}}
-          />
-        </Typography>
-        <br />
-        <Typography
-            variant="label"
-            fontFamily="MainFont4"
-            htmlFor="message"
-            align="center"
-        >
-          <TextField
-            id="message"
-            label="Message"
-            required
-            size="normal"
-            multiline
-            minRows={4}
-            style={{ width: 300}}
-          />
-        </Typography>
+                <Typography
+                  variant="h4"
+                  component="div"
+                  fontFamily="Modern"
+                  >
+                    Contact Us 
+                    
+                </Typography>
 
-        <Button
-         type="submit"
-         size="medium"
-         varient="contained"
-         >
-           {status}
-        </Button>
-        </Stack>
-      </form>
-      </Stack>
+                <TextField
+                  variant="outlined"
+                  id="name"            
+                  label="Name"
+                  required
+                  size="small"
+                  sx={{ fontSize: '1rem', width: '50%'}}
+                />
+
+
+                <TextField
+                  variant="outlined"
+                  id="email"
+                  label="Email"
+                  required
+                  size="small"
+                  sx={{ fontSize: '1rem', width: '50%'}}
+
+                />
+                
+
+              
+                <TextField
+
+                  variant="outlined"
+                  id="message"
+                  label="Message"
+                  required
+                  size="normal"
+                  multiline
+                  minRows={4}
+                  sx={{ fontSize: '1rem', width: '50%'}}
+
+                />
+
+
+                <Button 
+                  variant="outlined"
+                  >
+                    Submit 
+                  </Button>
+
+              </Stack>
+
+            </form>
+
+        </Paper>
 
       </Box>
     )

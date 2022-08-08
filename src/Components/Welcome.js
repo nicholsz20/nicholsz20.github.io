@@ -1,5 +1,5 @@
 import { Carousel } from 'react-carousel-minimal';
-import { Box, Stack } from '@mui/material'
+import { Box, Paper, Stack } from '@mui/material'
 import Typography from '@mui/material/Typography'
 import Services from './Services'
 
@@ -44,18 +44,38 @@ function Welcome() {
      fontWeight: 'bold',
    }
    return (
-     <div className="App">
-       <div style={{ textAlign: "center" }}>
-         <h2>React Carousel Minimal</h2>
-         <p>Easy to use, responsive and customizable carousel component for React Projects.</p>
-         <div style={{
-           padding: "0 20px"
-         }}>
+     <Box   
+        mt={{xs: 10, sm: 10, md: -1}}
+        justifyContent="center"
+        alignItems="center"
+        display="flex">
+
+        <Stack 
+          direction="column"
+          spacing={2}
+          justifyContent="center"
+          alignItems="center"
+          display="flex">
+
+          <Typography 
+            variant="h4"
+            component="div" 
+            fontFamily="Modern">
+                Todd's Photography
+          </Typography>
+
+         <Stack 
+          direction="column"
+          spacing={2}
+          justifyContent="center"
+          alignItems="center"
+          display="flex">
+
            <Carousel
              data={data}
              time={2000}
-             width="850px"
-             height="500px"
+             width={{xs: '100%', sm: '100%', md: '100vh'}}
+             height="30rem"
              captionStyle={captionStyle}
              radius="10px"
              slideNumber={true}
@@ -68,21 +88,15 @@ function Welcome() {
              slideBackgroundColor="darkgrey"
              slideImageFit="cover"
              thumbnails={true}
-             thumbnailWidth="100px"
-             style={{
-               textAlign: "center",
-               maxWidth: "850px",
-               maxHeight: "500px",
-               margin: "40px auto",
-             }}
-           />
-         </div>
-         <br />
-         <br />
-        <Services />
-       </div>
-     </div>
-   );
+             thumbnailWidth="100px"/>
+            
+
+         
+            <Services />
+       </Stack>
+       </Stack>
+     </Box>
+   )
  }
 
-export default Welcome;
+export default Welcome
