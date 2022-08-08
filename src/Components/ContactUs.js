@@ -4,34 +4,40 @@ import React, { useState } from 'react'
 import { Box, Typography, Stack, TextField, Button } from '@mui/material'
 
 const ContactUs  = () => {
-  const [status, setStatus] = useState("Submit");
+
+
+  const [status, setStatus] = useState("Submit")
+
+
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setStatus("Sending...");
-    const { name, email, message } = e.target.elements;
+    e.preventDefault()
+    setStatus("Sending...")
+    const { name, email, message } = e.target.elements
     let details = {
       name: name.value,
       email: email.value,
       message: message.value,
-    };
+    }
     let response = await fetch("http://localhost:3000/contact", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json;charset=utf-8",
+        "Content-Type": "application/jsoncharset=utf-8",
       },
       body: JSON.stringify(details),
-    });
-    setStatus("Submit");
-    let result = await response.json();
-    alert(result.status);
-  };
+    })
+    setStatus("Submit")
+    let result = await response.json()
+    alert(result.status)
+  }
+
+
     return (
       //Create a form where the user can click what type event they want a photo for
       <Box 
-      maxWidth={"80%"}
-      justifyContent={"center"}
-      alignItems={"center"}
-      display="flex">
+        maxWidth={"80%"}
+        justifyContent={"center"}
+        alignItems={"center"}
+        display="flex">
   
       <Stack
         mt={10}
@@ -45,7 +51,7 @@ const ContactUs  = () => {
             variant="h5"
             fontFamily="MainFont4"
             htmlFor="name"
-            align="Center"
+            align="center"
         >
           Contact Us
         </Typography>
