@@ -35,18 +35,20 @@ const ContactUs  = () => {
     return (
       //Create a form where the user can click what type event they want a photo for
       <Box 
+        mt={{ xs: 15, sm: 15}}
         justifyContent={"center"}
         alignItems={"center"}
-        display="flex">
+        display="flex"
+        maxWidth="100%">
        
 
   
         <Paper 
-          elevation={2}
+          elevation={0}
           sx={{ 
               width: {xs: '100%', sm: '100%', md: '50rem'}, 
               height: {xs: '100%', sm: '100%', md:'80vh'},
-              backgroundColor: '#f2f2f2'
+              backgroundColor: {md:'#f2f2f2'}
               }}>
 
             <form onSubmit={handleSubmit}>
@@ -57,7 +59,8 @@ const ContactUs  = () => {
                 spacing={2}
                 justifyContent="center"
                 alignItems="center" 
-                display="flex">
+                display="flex"
+                maxWidth="100%">
 
                 <Typography
                   variant="h4"
@@ -73,8 +76,8 @@ const ContactUs  = () => {
                   id="name"            
                   label="Name"
                   required
-                  size="small"
-                  sx={{ fontSize: '1rem', width: '50%'}}
+                  size="large"
+                  sx={{ fontSize: '1rem', width: {sm: '100%', md: '50%'}}}
                 />
 
 
@@ -83,8 +86,8 @@ const ContactUs  = () => {
                   id="email"
                   label="Email"
                   required
-                  size="small"
-                  sx={{ fontSize: '1rem', width: '50%'}}
+                  size="large"
+                  sx={{ fontSize: '1rem', width: {sm: '100%', md: '50%'}}}
 
                 />
                 
@@ -96,10 +99,10 @@ const ContactUs  = () => {
                   id="message"
                   label="Message"
                   required
-                  size="normal"
+                  size="large"
                   multiline
                   minRows={4}
-                  sx={{ fontSize: '1rem', width: '50%'}}
+                  sx={{ fontSize: '1rem', width: {sm: '100%', md: '50%'}}}
 
                 />
 
