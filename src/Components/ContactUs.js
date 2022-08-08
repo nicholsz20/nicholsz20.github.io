@@ -17,8 +17,13 @@ const ContactUs  = () => {
       name: name.value,
       email: email.value,
       message: message.value,
+<<<<<<< HEAD
     }
     let response = await fetch("http://localhost:3000/contact", {
+=======
+    };
+    let response = await fetch("http://localhost:5000/contact", {
+>>>>>>> 2431299620e8056a44929a8efd9194e08a7d7939
       method: "POST",
       headers: {
         "Content-Type": "application/jsoncharset=utf-8",
@@ -34,10 +39,19 @@ const ContactUs  = () => {
     return (
       //Create a form where the user can click what type event they want a photo for
       <Box 
+<<<<<<< HEAD
         maxWidth={"80%"}
         justifyContent={"center"}
         alignItems={"center"}
         display="flex">
+=======
+      maxWidth={"80%"}
+      justifyContent={"center"}
+      alignItems={"center"}
+      display="flex"
+      >
+
+>>>>>>> 2431299620e8056a44929a8efd9194e08a7d7939
   
       <Stack
         mt={10}
@@ -45,7 +59,9 @@ const ContactUs  = () => {
         spacing={5}
         justifyContent="center"
         alignItems="center"
-        display="flex">
+        display="flex"
+        backgroundColor="darkgrey"
+        >
 
         <Typography
             variant="h5"
@@ -65,9 +81,10 @@ const ContactUs  = () => {
             fontFamily="MainFont4"
             htmlFor="name"
             align="Center"
+
         >
           <TextField
-            id="name"
+            id="name"            
             label="Name"
             htmlFor="name"
             required
